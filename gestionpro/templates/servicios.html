@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="container py-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for servicio in servicios %}
+        <div class="col">
+            <div class="service-card">
+                <!-- Contenedor de la imagen -->
+                <div class="service-img-container">
+                    <img src="data:image/jpeg;base64,{{ servicio.imagen_base64 }}" class="service-img" alt="{{ servicio.nombre }}">
+                </div>
+
+                <!-- Contenido de la tarjeta -->
+                <div class="service-content">
+                    <h5 class="service-title">{{ servicio.nombre }}</h5>
+                    <p class="service-description">{{ servicio.descripcion|truncatewords:10 }}</p>
+                    <p class="service-price"><strong>Precio:</strong> S/ {{ servicio.precio }}</p>
+                    <div class="service-actions">
+                        <button class="btn btn-outline-primary" onclick="toggleModal(this)">Ver más</button>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+                
+                
+                <!-- Modal directamente superpuesto -->
+                <div class="modal-popup">
+                    <div class="modal-header">
+                        <h5>Descripción Completa</h5>
+                        <button class="close-btn" onclick="toggleModal(this)">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p> {{ servicio.descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

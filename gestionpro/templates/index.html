@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- SECCIÓN HERO: encabezado principal con mensaje de valor -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            <span class="first-line">EXPERTOS EN PERSONALIZACIÓN</span>
+            <span class="second-line">Y SEGURIDAD AUTOMOTRIZ</span>
+        </h1>
+        
+        <!-- TARJETAS INFORMATIVAS: Conócenos, Misión y Visión -->
+        <div class="info-cards">
+
+            <!-- Tarjeta: Conócenos -->
+            <div class="card">
+                <div class="car-header">
+                    <div class="card-icon">
+                        <img src="{% static 'img/nav/logo.png' %}" alt="Conócenos">
+                    </div>
+                    <h3>Conócenos</h3>
+                </div>
+                <p>
+                    Full Car Import SAC es una destacada empresa con más de 15 años de experiencia en el mundo automotriz,
+                    ubicada en Trujillo, Perú. Especializada en ofrecer servicios integrales de personalización y seguridad para vehículos.
+                </p>
+            </div>
+
+            <!-- Tarjeta: Misión -->
+            <div class="card">
+                <div class="car-header">
+                    <div class="card-icon">
+                        <img src="{% static 'img/hero/tiro.png' %}" alt="Misión">
+                    </div>
+                    <h3>Misión</h3>
+                </div>
+                <p>
+                    Nuestra misión es proporcionar soluciones automotrices personalizadas y de alta calidad
+                    que mejoran la seguridad, el rendimiento y el confort de los vehículos de nuestros clientes.
+                </p>
+            </div>
+
+            <!-- Tarjeta: Visión -->
+            <div class="card">
+                <div class="car-header">
+                    <div class="card-icon">
+                        <img src="{% static 'img/hero/oji.png' %}" alt="Visión">
+                    </div>
+                    <h3>Visión</h3>
+                </div>
+                <p>
+                    Ser la empresa líder en servicios automotrices en Perú, reconocida por nuestra excelencia,
+                    innovación y compromiso con la satisfacción del cliente. Buscamos expandir nuestra presencia a nivel nacional.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

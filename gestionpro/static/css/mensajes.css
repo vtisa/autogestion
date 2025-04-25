@@ -1,0 +1,106 @@
+/* Sección de contacto */
+.contact-section {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+/* Contenedor general */
+.container-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mapa */
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.ubicacion {
+    margin-top: 20px;
+}
+
+.ubicacion h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.ubicacion p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Formulario */
+.form-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Campos */
+.campo-formulario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-formulario label {
+    background-color: #FFD700;
+    padding: 10px 15px;
+    border-radius: 5px;
+    min-width: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Botón */
+.boton-enviar {
+    text-align: center;
+}
+
+.boton-enviar button {
+    background-color: #FFD700;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo-formulario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .campo-formulario label {
+        min-width: auto;
+        width: 100%;
+        text-align: left;
+    }
+}
