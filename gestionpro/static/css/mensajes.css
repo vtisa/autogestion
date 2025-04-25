@@ -52,17 +52,21 @@
 /* Campos */
 .campo-formulario {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     gap: 10px;
+    align-items: center;
+    width: 100%;
 }
 
 .campo-formulario label {
+    width: 150px; /* Fijo */
+    min-width: 150px;
     background-color: #FFD700;
     padding: 10px 15px;
     border-radius: 5px;
-    min-width: 80px;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .campo-formulario input,
@@ -70,6 +74,9 @@
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 /* Botón */
@@ -90,16 +97,20 @@
 @media (max-width: 768px) {
     .container-contacto {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+    }
+
+    .map-container,
+    .form-container {
+        width: 100%;
     }
 
     .campo-formulario {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
     .campo-formulario label {
-        min-width: auto;
         width: 100%;
         text-align: left;
     }
