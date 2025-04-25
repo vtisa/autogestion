@@ -2,13 +2,15 @@
  .service-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Sombra un poco más fuerte */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
 }
+
 
 /* Contenedor de la imagen */
 .service-img-container {
@@ -62,20 +64,40 @@
     font-size: 0.85rem;
     border-radius: 5px;
     text-transform: uppercase;
-    cursor: pointer;
+    background-color: #FFD700;
+    color: white;
+    border: 1px solid #FFD700;
+}
+
+.btn:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+    color: white;
 }
 
 .btn-outline-primary {
-    border: 1px solid #007bff;
-    color: #007bff;
+    border: 1px solid #FFD700;
+    color: #FFD700;
     background-color: transparent;
 }
 
-.btn-primary {
-    background-color: #007bff;
+.btn-outline-primary:hover {
+    background-color: #FFD700;
     color: white;
-    text-decoration: none;
 }
+
+.btn-primary {
+    background-color: #FFD700;
+    color: white;
+    border: 1px solid #FFD700;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+    border-color: #e6c200;
+    color: white;
+}
+
 
 /* Estilos para el modal personalizado */
 .modal-popup {
@@ -95,7 +117,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #FFD700;
 }
 
 .modal-body {
